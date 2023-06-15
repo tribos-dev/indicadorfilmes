@@ -1,4 +1,4 @@
-package academy.wakanda.indicadorfilmes.filme.service;
+package academy.wakanda.indicadorfilmes.filme.application.service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;

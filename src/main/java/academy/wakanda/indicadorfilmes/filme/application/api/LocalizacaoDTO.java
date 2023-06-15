@@ -1,4 +1,4 @@
-package academy.wakanda.indicadorfilmes.filme.api;
+package academy.wakanda.indicadorfilmes.filme.application.api;
 
 import lombok.Builder;
 import lombok.Getter;

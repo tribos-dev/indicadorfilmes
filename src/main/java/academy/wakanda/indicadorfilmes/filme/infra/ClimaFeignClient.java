@@ -1,6 +1,6 @@
 package academy.wakanda.indicadorfilmes.filme.infra;
 
-import academy.wakanda.indicadorfilmes.filme.service.ClimaDTO;
+import academy.wakanda.indicadorfilmes.filme.application.service.ClimaDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

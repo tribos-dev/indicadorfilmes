@@ -1,7 +1,7 @@
-package academy.wakanda.indicadorfilmes.filme.service;
+package academy.wakanda.indicadorfilmes.filme.application.service;
 
-import academy.wakanda.indicadorfilmes.filme.api.FilmeResponse;
-import academy.wakanda.indicadorfilmes.filme.api.LocalizacaoDTO;
+import academy.wakanda.indicadorfilmes.filme.application.api.FilmeResponse;
+import academy.wakanda.indicadorfilmes.filme.application.api.LocalizacaoDTO;
 import academy.wakanda.indicadorfilmes.filme.domain.FilmeCategoria;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class IndicadorFilmesApplicationService implements IndicadorFilmesService {
     private final ClimaClient climaClient;
-//    private final FilmeCategoriaRepository filmeCategoriaRespository;
+    private final FilmeCategoriaRepository filmeCategoriaRespository;
 //    private final FilmeClient filmeClient;
 
     @Override
@@ -22,7 +22,7 @@ public class IndicadorFilmesApplicationService implements IndicadorFilmesService
         log.info("[start] IndicadorFilmesApplicationService - buscaIndicacoesFilmes");
         log.info("[localizacao] {}",localizacao);
         ClimaDTO clima = climaClient.buscaClima(localizacao);
-//        FilmeCategoria categoria = filmeCategoriaRespository.buscaAtravesTemperatura(clima.getTemperatura());
+        FilmeCategoria categoria = filmeCategoriaRespository.buscaAtravesTemperatura(clima.getTemperatura());
 //        List<FilmeResponse> filmes = filmeClient.buscaAtravesCategoria(categoria);
         log.info("[finish] IndicadorFilmesApplicationService - buscaIndicacoesFilmes");
         return null;

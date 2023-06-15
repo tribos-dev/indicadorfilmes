@@ -1,7 +1,6 @@
-package academy.wakanda.indicadorfilmes.filme.api;
+package academy.wakanda.indicadorfilmes.filme.application.api;
 
-import academy.wakanda.indicadorfilmes.filme.service.IndicadorFilmesService;
-import lombok.Getter;
+import academy.wakanda.indicadorfilmes.filme.application.service.IndicadorFilmesService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.GetMapping;
