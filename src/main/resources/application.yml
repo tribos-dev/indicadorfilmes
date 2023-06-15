@@ -4,3 +4,18 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
