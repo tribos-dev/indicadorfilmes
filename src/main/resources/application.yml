@@ -32,3 +32,10 @@ indicadorfilmes:
   filme:
     token: ${FILME_TOKEN:Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZjM3ZGUzMzQ2YjM0ZmEyZjU1OWIyNzUxYTU1MWU3ZiIsInN1YiI6IjY0OTIyYTlkODUwMDVkMDBlODc3Njc0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E2VBsqmW7FLpDlWxO7KBJtxUS_fBfGMUojSGNToqK4I}
     server: https://api.themoviedb.org
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+    org.springframework.web: ${LOG_LEVEL:INFO}
+    org.hibernate: ${LOG_LEVEL:INFO}
+    academy.wakanda.indicadorfilmes: ${LOG_LEVEL:INFO}
