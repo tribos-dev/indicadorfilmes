@@ -29,3 +29,6 @@ indicadorfilmes:
     apikey: ${CLIMA_API_KEY:d84295d4cacf008b00d6ab3c95613bce}
     units: metric
     server: https://api.openweathermap.org/data/2.5
+  filme:
+    token: ${FILME_TOKEN:Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZjM3ZGUzMzQ2YjM0ZmEyZjU1OWIyNzUxYTU1MWU3ZiIsInN1YiI6IjY0OTIyYTlkODUwMDVkMDBlODc3Njc0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E2VBsqmW7FLpDlWxO7KBJtxUS_fBfGMUojSGNToqK4I}
+    server: https://api.themoviedb.org
