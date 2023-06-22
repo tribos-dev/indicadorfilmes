@@ -23,3 +23,9 @@ spring:
     console:
       enabled: true
       path: /h2-console
+
+indicadorfilmes:
+  clima:
+    apikey: ${CLIMA_API_KEY:d84295d4cacf008b00d6ab3c95613bce}
+    units: metric
+    server: https://api.openweathermap.org/data/2.5

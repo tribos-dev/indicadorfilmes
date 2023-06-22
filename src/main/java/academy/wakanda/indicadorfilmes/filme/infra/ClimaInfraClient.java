@@ -5,6 +5,8 @@ import academy.wakanda.indicadorfilmes.filme.application.service.ClimaClient;
 import academy.wakanda.indicadorfilmes.filme.application.service.ClimaDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,8 +14,8 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class ClimaInfraClient implements ClimaClient {
     private final ClimaFeignClient climaFeignClient;
-    private String apiKey = "d84295d4cacf008b00d6ab3c95613bce";
-    private String units = "metric";
+    private String apiKey;
+    private String units;
 
     @Override
     public ClimaDTO buscaClima(LocalizacaoDTO localizacao) {
@@ -22,5 +24,15 @@ public class ClimaInfraClient implements ClimaClient {
         log.info("[clima]{}",climaDTO);
         log.info("[finish] ClimaInfraClient - buscaClima");
         return climaDTO;
+    }
+
+    @Autowired
+    public void setApiKey(@Value("${indicadorfilmes.clima.apikey}") String apiKey) {
+        this.apiKey = apiKey;
+    }
+
+    @Autowired
+    public void setUnits(@Value("${indicadorfilmes.clima.units}") String units) {
+        this.units = units;
     }
 }
